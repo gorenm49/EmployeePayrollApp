@@ -18,7 +18,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(); false">
+        <form class="form" id="form" action="#" >
             <div class="form-head">Employee Payroll Form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -46,12 +46,12 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="gender">Gender</label>
+                <label class="label text" id="gender" for="gender">Gender</label>
                 <div>
                     <input type="radio" id="male" name="gender" value="male">
                     <label class="text" for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="female">
-                    <label class="text" for="female">Male</label>
+                    <label class="text" for="female">Female</label>
                 </div>
             </div>
             <div class="row-content">
@@ -153,6 +153,14 @@
         output.textContent = salary.value;
         salary.addEventListener('input',function(){
             output.textContent = salary.value;
+        });
+       
+        var form = document.getElementById('form')
+
+        form.addEventListener('submit',function(event){
+            
+            var name = document.getElementById('name').value
+            console.log(name)
         });
     </script>
 </body>
