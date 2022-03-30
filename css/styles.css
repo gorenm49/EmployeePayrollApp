@@ -160,6 +160,12 @@ select{
     border-bottom-left-radius:15px;
 }
 
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
 .cancelButton{
     text-decoration: none;
     text-align: center;
